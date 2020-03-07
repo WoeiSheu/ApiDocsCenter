@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Xu Wei">
+    <title>API Docs</title>
+    <!-- Favicons -->
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#563d7c">
+    <!-- Bootstrap core CSS -->
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Custom css -->
+    <link href="assets/styles/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" id="toggleRender">API Document Center</a>
+      <div class="input-group">
+        <input id="searchContent"
+          class="form-control form-control-dark w-100"
+          type="text" placeholder="Search" aria-label="Search"
+          autocomplete="off"/>
+      </div>
+      <a id="searchAction" class="navbar-nav px-3">
+        <span data-feather="search" color="white"></span>
+      </a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap" id="toggleDocs">
+          <a class="nav-link" href="#">
+            切换文档
+            <span data-feather="align-justify"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" id="main" class="col-lg-10 px-4">
+          <rapi-doc
+            spec-url = "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/callback-example.yaml"
+            render-style = 'view'
+            show-header = 'false'
+            show-info = 'false'
+            allow-authentication ='false'
+            allow-server-selection = 'false'
+            allow-api-list-style-selection ='false'
+            regular-font="'Sarasa Mono T CL'"
+            layout = 'column'
+          > 
+          </rapi-doc>
+        </main>
+ 
+        <nav class="col-lg-2 bg-light sidebar" id="sidebar">
+          <div class="sidebar-sticky">
+          </div>
+        </nav>
+
+      </div>
+    </div>
+    <script src="assets/scripts/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="assets/scripts/popper.min.js"></script>
+    <script src="assets/scripts/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src="assets/scripts/bootstrap-4-autocomplete.min.js"></script>
+    <script src="assets/scripts/feather.min.js"></script>
+    <script src="assets/scripts/rapidoc-min.js"></script>
+    <script src="assets/scripts/custom.js"></script>
+</html>
