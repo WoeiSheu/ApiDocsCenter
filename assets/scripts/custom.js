@@ -3,15 +3,21 @@ let selectedList = {};
 
 $.getJSON( "/assets/setting.json", function( data ) {
     //console.log(data);
-    let section = "";
+    let section = `
+        <div class="accrodion" id="accordionRoot">
+    `;
+    let idx = 0;
     $.each( data, function( group, items ) {
+        idx += 1;
         let wrapper = `
-           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-              <span>Group ${group}</span>
-              <a class="d-flex align-items-center text-muted" href="#" aria-label="Docs of ${group} group">
-                <span data-feather="code"></span>
-              </a>
-            </h6>
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
+               id="heading${idx}" data-toggle="collapse" data-target="#collapse${idx}">
+            <span>Group ${group}</span>
+            <a class="d-flex align-items-center text-muted" href="#" aria-label="Docs of ${group} group">
+              <span data-feather="chevrons-down"></span>
+            </a>
+          </h6>
+          <div id="collapse${idx}" aria-labelledby="heading${idx}" data-parent="#accordionRoot" class="collapse">
             <ul class="nav flex-column mb-2">
         `;
         $.each(items, function( title, specUrl ) {
@@ -29,9 +35,11 @@ $.getJSON( "/assets/setting.json", function( data ) {
         });
         wrapper += `
             </ul>
+          </div>
         `;
         section += wrapper;
     });
+    section += "</div>";
 
     let parent = $("#sidebar > .sidebar-sticky");
     $(section).appendTo(parent);
@@ -50,11 +58,13 @@ function bindListenser() {
             $("#sidebar").hide();
             $("#main").removeClass('col-lg-10');
             $("#main").addClass('col-lg-12');
+            $("#toggleDocsDesc").text('展开目录');
             toggleFlag = false;
         } else {
             $("#sidebar").show();
             $("#main").removeClass('col-lg-12');
             $("#main").addClass('col-lg-10');
+            $("#toggleDocsDesc").text('收起目录');
             toggleFlag = true;
         }
     });
