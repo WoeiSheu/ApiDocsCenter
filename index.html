@@ -10,13 +10,15 @@
     <link rel="icon" href="favicon.ico">
     <meta name="theme-color" content="#563d7c">
     <!-- Bootstrap core CSS -->
-    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="./assets/styles/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Custom css -->
-    <link href="assets/styles/custom.css" rel="stylesheet">
+    <link href="./assets/styles/custom.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" id="toggleRender">API Document Center</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0"
+         href="#" id="toggleRender"
+         data-toggle="tooltip" data-placement="bottom" title="Try to click me!">API Document Center</a>
       <div class="input-group">
         <input id="searchContent"
           class="form-control form-control-dark w-100"
@@ -29,7 +31,7 @@
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap" id="toggleDocs">
           <a class="nav-link" href="#">
-            <span id="toggleDocsDesc">收起目录</span>
+            <span id="toggleDocsDesc">Fold</span>
             <span data-feather="align-justify"></span>
           </a>
         </li>
@@ -41,7 +43,7 @@
         <main role="main" id="main" class="col-lg-10 px-4">
           <rapi-doc
             spec-url = "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/callback-example.yaml"
-            render-style = 'view'
+            render-style = 'read'
             show-header = 'false'
             show-info = 'false'
             allow-authentication ='false'
@@ -51,6 +53,9 @@
             layout = 'column'
           > 
           </rapi-doc>
+          <div id="thirdDocs">
+
+          </div>
         </main>
  
         <nav class="col-lg-2 bg-light sidebar" id="sidebar">
@@ -60,11 +65,12 @@
 
       </div>
     </div>
-    <script src="assets/scripts/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="assets/scripts/popper.min.js"></script>
-    <script src="assets/scripts/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-    <script src="assets/scripts/bootstrap-4-autocomplete.min.js"></script>
-    <script src="assets/scripts/feather.min.js"></script>
-    <script src="assets/scripts/rapidoc-min.js"></script>
-    <script src="assets/scripts/custom.js"></script>
+    <script src="./assets/scripts/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/popper.min.js"></script>
+    <script src="./assets/scripts/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/bootstrap-4-autocomplete.min.js"></script>
+    <script src="./assets/scripts/feather.min.js"></script>
+    <script src="./assets/scripts/rapidoc-min.js"></script>
+    <script src="./assets/scripts/marked.min.js"></script>
+    <script src="./assets/scripts/custom.js"></script>
 </html>

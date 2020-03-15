@@ -8,5 +8,13 @@
         "Callback": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/callback-example.yaml",
         "Link": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/link-example.yaml",
         "Uspto": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/uspto.yaml"
+    },
+    "HTML": {
+        "Introduction": "https://www.w3.org/TR/html53/introduction.html",
+        "Acknowledgements": "https://www.w3.org/TR/xhtml11/acknowledgements.html"
+    },
+    "Markdown": {
+        "RapiDoc": "https://raw.githubusercontent.com/mrin9/RapiDoc/master/README.md",
+        "Marked": "https://raw.githubusercontent.com/markedjs/marked/master/README.md"
     }
 }
