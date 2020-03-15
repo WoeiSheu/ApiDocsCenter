@@ -166,7 +166,7 @@ function loadSelected(specUrl) {
 }
 
 function getSettingPath() {
-    let settingPath = "../assets/";
+    let settingPath = "./assets/";
     let urlParams = new URLSearchParams(window.location.search);
     let settingFile = urlParams.get('setting');
     if(!settingFile) {
